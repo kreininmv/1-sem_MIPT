@@ -1,0 +1,63 @@
+Stack (INITIALIZED) point to data[6381584]; point to stack[5766480];
+{
+  long goose1 = 5
+  int count   = 3
+  int  size   = 50
+  int* data   [6381584]
+  {
+     goose_data1 -nan(ind)
+    *[0] - 20.500000
+    *[1] - 24.500000
+    *[2] - 25656.000000
+     [3] - -nan(ind)
+     [4] - -nan(ind)
+     [5] - -nan(ind)
+     [6] - -nan(ind)
+     [7] - -nan(ind)
+     [8] - -nan(ind)
+     [9] - -nan(ind)
+     [10] - -nan(ind)
+     [11] - -nan(ind)
+     [12] - -nan(ind)
+     [13] - -nan(ind)
+     [14] - -nan(ind)
+     [15] - -nan(ind)
+     [16] - -nan(ind)
+     [17] - -nan(ind)
+     [18] - -nan(ind)
+     [19] - -nan(ind)
+     [20] - -nan(ind)
+     [21] - -nan(ind)
+     [22] - -nan(ind)
+     [23] - -nan(ind)
+     [24] - -nan(ind)
+     [25] - -nan(ind)
+     [26] - -nan(ind)
+     [27] - -nan(ind)
+     [28] - -nan(ind)
+     [29] - -nan(ind)
+     [30] - -nan(ind)
+     [31] - -nan(ind)
+     [32] - -nan(ind)
+     [33] - -nan(ind)
+     [34] - -nan(ind)
+     [35] - -nan(ind)
+     [36] - -nan(ind)
+     [37] - -nan(ind)
+     [38] - -nan(ind)
+     [39] - -nan(ind)
+     [40] - -nan(ind)
+     [41] - -nan(ind)
+     [42] - -nan(ind)
+     [43] - -nan(ind)
+     [44] - -nan(ind)
+     [45] - -nan(ind)
+     [46] - -nan(ind)
+     [47] - -nan(ind)
+     [48] - -nan(ind)
+     [49] - -nan(ind)
+     goose_data2 -nan(ind)
+  }
+  long goose2 = goose_silent
+}
+
