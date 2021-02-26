@@ -1,0 +1,25 @@
+push in
+push in
+push in
+pop cx
+pop bx
+pop ax
+push bx
+push bx
+mul
+push 4
+push ax
+push cx
+mul
+mul
+sub
+pop dx
+push bx
+neg
+push dx
+add
+push 2
+push ax
+mul
+div
+out
