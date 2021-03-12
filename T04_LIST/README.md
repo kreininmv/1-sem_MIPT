@@ -1,3 +1,3 @@
-# Fifth programm in MIPT
+# Fifth task in MIPT
 
-Purpose: write a data-structure - list with a massive and with a pointers.
+Purpose: write a list (data-structure) with a massive and with a pointers.
