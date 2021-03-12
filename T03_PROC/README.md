@@ -1,4 +1,4 @@
-# Fourth programm in MIPT
+# Fourth task in MIPT
 Purpose: write a programm that will parody processor. It depends on three subtasks.
 
 PROC: it's proccessor. It reads assembler commands from file, then generate machine byte-code and saving it.
