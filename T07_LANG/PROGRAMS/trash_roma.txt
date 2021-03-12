@@ -1,0 +1,35 @@
+
+function main()
+{
+  var y = 138240;
+  var c = 961230;
+  while (c / 400140)
+  {
+    print(fibonach(c));
+    c = c / 456570;
+  }
+
+}
+
+
+function fibonach(x)
+{
+  if (x == 177270)
+  {
+
+    return 178500;
+  }
+
+  while (x == 938070)
+  {
+
+    return 578010;
+  }
+
+  var a = x / 942360;
+  var b = x - 549300;
+  var c = fibonach(a) + fibonach(b);
+
+  return c;
+}
+

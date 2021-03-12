@@ -1,0 +1,415 @@
+push 0
+push 0
+pop dx
+pop ax
+call :main
+
+hlt
+
+main:
+
+//Parametres for moving dx to variables in new function:
+push 5
+push dx
+add
+pop dx
+////////////////
+
+
+//POP ARGS TO THE VARS FROM STACK:
+//ENDED POPING PARAMS TO THE CALLING VARS
+
+push 1.000000
+pop [dx+0]
+
+//That's for repeat action
+while1:
+////////////////////////////
+
+//It's start of condition for WHILE
+push [dx+0]
+push 6.000000
+ja :while0
+//It's end of condition for WHILE
+
+//It's START BODY OF WHILE
+
+//CALL 'fibonacci'
+
+//ARGUMENTS:
+push [dx+0]
+///////////
+call :fibonacci
+//Parametres for moving dx to variables after calling function:
+push dx
+push 3
+sub
+pop dx
+
+
+out
+push [dx+0]
+push 1.000000
+add
+pop [dx+0]
+
+call :while1
+//It's END BODY OF WHILE
+while0:
+push 1.000000
+pop [dx+0]
+
+//That's for repeat action
+while3:
+////////////////////////////
+
+//It's start of condition for WHILE
+push [dx+0]
+push 7.000000
+jae :while2
+//It's end of condition for WHILE
+
+//It's START BODY OF WHILE
+
+//CALL 'factorial'
+
+//ARGUMENTS:
+push [dx+0]
+///////////
+call :factorial
+//Parametres for moving dx to variables after calling function:
+push dx
+push 1
+sub
+pop dx
+
+
+out
+push [dx+0]
+push 1.000000
+add
+pop [dx+0]
+
+call :while3
+//It's END BODY OF WHILE
+while2:
+push 0.000000
+pop [dx+-1]
+push 0.000000
+pop [dx+-2]
+push 0.000000
+pop [dx+-3]
+in
+pop [dx+-1]
+in
+pop [dx+-2]
+in
+pop [dx+-3]
+
+//CALL 'solve'
+
+//ARGUMENTS:
+push [dx+-1]
+push [dx+-2]
+push [dx+-3]
+///////////
+call :solve
+//Parametres for moving dx to variables after calling function:
+push dx
+push 4
+sub
+pop dx
+
+
+pop [dx+-4]
+hlt
+
+solvelin:
+
+//Parametres for moving dx to variables in new function:
+push 2
+push dx
+add
+pop dx
+////////////////
+
+
+//POP ARGS TO THE VARS FROM STACK:
+pop [dx+0]
+pop [dx+-1]
+//ENDED POPING PARAMS TO THE CALLING VARS
+
+
+//It's start of condition for IF
+push [dx+-1]
+push [dx+0]
+mul
+push 0.000000
+je :if0
+
+//It's end of condition for IF
+
+//It's START BODY OF IF
+push 1.000000
+out
+push [dx+0]
+push [dx+-1]
+div
+out
+push 1.000000
+rtrn
+
+//It's END BODY OF IF
+if0:
+
+//It's start of condition for IF
+push [dx+0]
+push 0.000000
+jne :if1
+
+//It's end of condition for IF
+
+//It's START BODY OF IF
+push 0.000000
+push 1.000000
+sub
+out
+push 0.000000
+rtrn
+
+//It's END BODY OF IF
+if1:
+push 0.000000
+out
+push 0.000000
+rtrn
+
+solve:
+
+//Parametres for moving dx to variables in new function:
+push 4
+push dx
+add
+pop dx
+////////////////
+
+
+//POP ARGS TO THE VARS FROM STACK:
+pop [dx+0]
+pop [dx+-1]
+pop [dx+-2]
+//ENDED POPING PARAMS TO THE CALLING VARS
+
+
+//It's start of condition for IF
+push [dx+-2]
+push 0.000000
+jne :if2
+
+//It's end of condition for IF
+
+//It's START BODY OF IF
+
+//CALL 'solvelin'
+
+//ARGUMENTS:
+push [dx+-1]
+push [dx+0]
+///////////
+call :solvelin
+//Parametres for moving dx to variables after calling function:
+push dx
+push 2
+sub
+pop dx
+
+
+rtrn
+
+//It's END BODY OF IF
+if2:
+push [dx+-1]
+push [dx+-1]
+mul
+push 4.000000
+push [dx+-2]
+mul
+push [dx+0]
+mul
+sub
+pop [dx+-3]
+
+//It's start of condition for IF
+push [dx+-3]
+push 0.000000
+jae :if3
+
+//It's end of condition for IF
+
+//It's START BODY OF IF
+push 0.000000
+rtrn
+
+//It's END BODY OF IF
+if3:
+push [dx+-3]
+sqrt
+pop [dx+-3]
+push 0.000000
+push [dx+-1]
+sub
+pop [dx+-1]
+push 2.000000
+out
+push [dx+-1]
+push [dx+-3]
+add
+push 2.000000
+push [dx+-2]
+mul
+div
+out
+push [dx+-1]
+push [dx+-3]
+sub
+push 2.000000
+push [dx+-2]
+mul
+div
+out
+push 0.000000
+rtrn
+
+fibonacci:
+
+//Parametres for moving dx to variables in new function:
+push 3
+push dx
+add
+pop dx
+////////////////
+
+
+//POP ARGS TO THE VARS FROM STACK:
+pop [dx+0]
+//ENDED POPING PARAMS TO THE CALLING VARS
+
+
+//It's start of condition for IF
+push [dx+0]
+push 0.000000
+jne :if4
+
+//It's end of condition for IF
+
+//It's START BODY OF IF
+push 0.000000
+rtrn
+
+//It's END BODY OF IF
+if4:
+
+//It's start of condition for IF
+push [dx+0]
+push 1.000000
+jne :if5
+
+//It's end of condition for IF
+
+//It's START BODY OF IF
+push 1.000000
+rtrn
+
+//It's END BODY OF IF
+if5:
+push [dx+0]
+push 1.000000
+sub
+pop [dx+-1]
+push [dx+0]
+push 2.000000
+sub
+pop [dx+-2]
+
+//CALL 'fibonacci'
+
+//ARGUMENTS:
+push [dx+-1]
+///////////
+call :fibonacci
+//Parametres for moving dx to variables after calling function:
+push dx
+push 3
+sub
+pop dx
+
+
+pop [dx+-1]
+
+//CALL 'fibonacci'
+
+//ARGUMENTS:
+push [dx+-2]
+///////////
+call :fibonacci
+//Parametres for moving dx to variables after calling function:
+push dx
+push 3
+sub
+pop dx
+
+
+pop [dx+-2]
+push [dx+-1]
+push [dx+-2]
+add
+rtrn
+
+factorial:
+
+//Parametres for moving dx to variables in new function:
+push 1
+push dx
+add
+pop dx
+////////////////
+
+
+//POP ARGS TO THE VARS FROM STACK:
+pop [dx+0]
+//ENDED POPING PARAMS TO THE CALLING VARS
+
+
+//It's start of condition for IF
+push [dx+0]
+push 1.000000
+ja :if6
+
+//It's end of condition for IF
+
+//It's START BODY OF IF
+push 1.000000
+rtrn
+
+//It's END BODY OF IF
+if6:
+
+//CALL 'factorial'
+
+//ARGUMENTS:
+push [dx+0]
+push 1.000000
+sub
+///////////
+call :factorial
+//Parametres for moving dx to variables after calling function:
+push dx
+push 1
+sub
+pop dx
+
+
+push [dx+0]
+mul
+rtrn
+

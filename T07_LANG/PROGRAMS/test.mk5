@@ -1,0 +1,37 @@
+push 0
+push 0
+pop dx
+pop ax
+call :main
+
+hlt
+
+main:
+
+//Parametres for moving dx to variables in new function:
+push 2
+push dx
+add
+pop dx
+////////////////
+
+
+//POP ARGS TO THE VARS FROM STACK:
+//ENDED POPING PARAMS TO THE CALLING VARS
+
+push 831810.000000
+pop [dx+0]
+push 770490.000000
+push [dx+0]
+div
+push 699150.000000
+push 215730.000000
+sub
+add
+push 102690.000000
+add
+pop [dx+-1]
+push [dx+-1]
+out
+rtrn
+

@@ -1,0 +1,96 @@
+function main()
+{
+  var i = 1;
+  
+  while (i <= 6)
+  {
+    print(fibonacci(i));
+    i = i + 1;
+  } 
+  i = 1;
+  while (i < 7)
+  {
+    print(factorial(i));
+    i = i + 1;
+  }
+
+  var a = 0;
+  var b = 0;
+  var c = 0;
+  scan(a);
+  scan(b);
+  scan(c);
+  var e = solve(a, b, c);
+
+  return;
+}
+
+function solvelin(b, c)
+{
+  if (b*c != 0)
+  {
+    print(1);
+    print(c/b);
+    return 1;
+  }
+
+  if (c == 0)
+  {
+    print(-1);
+    return 0;
+  }
+  print(0);
+  
+  return 0; 
+}
+
+function solve(a, b, c)
+{
+  if(a == 0) 
+  {
+    return solvelin(b, c);
+  }
+  
+  var d = b * b - 4 * a * c;
+  
+  if(d < 0) {
+    return 0;
+  }
+  
+  d = sqrt(d);
+  b = - b;
+  
+  print(2);
+  print((b + d)/(2 * a));
+  print((b - d)/(2 * a));
+
+  return 0;
+}
+
+function fibonacci(n)
+{
+  if (n == 0) {
+    return 0;
+  }
+  
+  if (n == 1) {
+    return 1;
+  }
+
+  var x = n - 1;
+  var y = n - 2;
+  x  = fibonacci(x);
+  y  = fibonacci(y);
+
+  return x + y;
+}
+
+function factorial(n)
+{
+  if(n <= 1)
+  {
+    return 1;
+  }
+  
+  return factorial(n - 1) * n;
+}

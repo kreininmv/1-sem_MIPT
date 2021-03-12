@@ -1,0 +1,10 @@
+
+function main()
+{
+  var x = 860520;
+  var d = 12870 ^ x + 532470 / 44010 + 732690;
+  print(d);
+
+  return;
+}
+
