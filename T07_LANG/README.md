@@ -43,4 +43,10 @@ function fibonach(x) {
 }
 ```
 ## Frontend^-1.
-At the input, the program receives a file, where described a syntax tree. Programm reads tree from file and writes code of programm only by information that saved in syntax tree.
+At the input, the programm receives a file, where described a syntax tree. Programm reads tree from file and writes code of programm only by information that saved in syntax tree.
+
+## Middle-end.
+At the input, the programm receives, where described a syntax tree. Programm reads syntax tree and than starts looking for expressions that can simplify, with operator of taking derivative of the function and makes calculus of expressions.
+
+## Back end.
+At the input, the programm receives a file, where descibed a syntax tree. Programm read syntax tree and than translate into my own assembler and save in text file.
