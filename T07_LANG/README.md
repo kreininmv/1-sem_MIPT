@@ -42,3 +42,5 @@ function fibonach(x) {
   return c;
 }
 ```
+## Frontend^-1.
+At the input, the program receives a file, where described a syntax tree. Programm reads tree from file and writes code of programm only by information that saved in syntax tree.
