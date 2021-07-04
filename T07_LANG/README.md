@@ -17,30 +17,21 @@ This is example of code.
 
 ``` C++ 
 
-function main()
-{
+function main() {
   var y = 8;
   var c = 0;
-  while (c < 10)
-  {
+  while (c < 10) {
     print(fibonach(c));
     c = c + 1;
   }
-
 }
 
-
-function fibonach(x)
-{
-  if (x == 0)
-  {
-
+function fibonach(x) {
+  if (x == 0){
     return 0;
   }
 
-  if (x == 1)
-  {
-
+  if (x == 1) {
     return 1;
   }
 
@@ -50,6 +41,4 @@ function fibonach(x)
 
   return c;
 }
-
-
 ```
